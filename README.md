@@ -1,3 +1,10 @@
+# OIDC 认证例子
+* [angular-oauth2-oidc 代码](https://github.com/manfredsteyer/angular-oauth2-oidc)
+* [angular-oauth2-oidc 文档](https://manfredsteyer.github.io/angular-oauth2-oidc/docs/index.html)
+* [sample-angular-oauth2-oidc-with-auth-guards 例子](https://github.com/jeroenheijmans/sample-angular-oauth2-oidc-with-auth-guards/tree/implicit-flow)
+
+
+
 # Example angular-oauth2-oidc with AuthGuard
 
 This repository shows a basic Angular CLI application with [the `angular-oauth2-oidc` library](https://github.com/manfredsteyer/angular-oauth2-oidc) and Angular AuthGuards.

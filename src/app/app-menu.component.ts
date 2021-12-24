@@ -13,19 +13,23 @@ import { AuthService } from './core/auth.service';
       <li class="nav-item">
         <a class="nav-link" routerLinkActive="active" routerLink="basics/public">Public</a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link" routerLinkActive="active" routerLink="basics/admin1">
           <span *ngIf="!(isAuthenticated | async)">🔒</span>
           Admin-1
         </a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link" routerLinkActive="active" routerLink="extras/admin2">
           <span *ngIf="!(isAuthenticated | async)">🔒</span>
           Admin-2
         </a>
       </li>
+
     </ul>
+
     <button class="btn btn-sm btn-default" (click)="login()" *ngIf="!(isAuthenticated | async)">Log in</button>
     <span *ngIf="isAuthenticated | async">{{email}}</span>
     <button *ngIf="isAuthenticated | async" href="#" (click)="logout()" class="btn btn-link">(log out)</button>
@@ -43,7 +47,7 @@ export class AppMenuComponent {
 
   get email() {
     return this.authService.identityClaims
-    ? this.authService.identityClaims['email']
+    ? this.authService.identityClaims['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress']
     : '-';
   }
 }
